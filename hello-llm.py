@@ -9,7 +9,7 @@ client = OpenAI(
     base_url=os.environ["NRP_LLM_BASE_URL"],
 )
 response = client.chat.completions.create(
-    model="gpt-oss",
-    messages=[{"role": "user", "content": "What is the National Research Platform?"}],
+    model="qwen3-small",
+    messages=[{"role": "user", "content": "What is the National Research Platform? (the one for the United States)"}],
 )
 print(response.choices[0].message.content)
